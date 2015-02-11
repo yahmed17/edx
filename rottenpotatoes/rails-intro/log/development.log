@@ -1,0 +1,675 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (75.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (25.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111119180638')[0m
+  [1m[35m (27.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (24.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "G"], ["release_date", Wed, 25 Nov 1992 00:00:00 UTC +00:00], ["title", "Aladdin"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[35m (23.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Fri, 26 Oct 1984 00:00:00 UTC +00:00], ["title", "The Terminator"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[36m (18.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Fri, 21 Jul 1989 00:00:00 UTC +00:00], ["title", "When Harry Met Sally"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[35m (22.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "PG-13"], ["release_date", Wed, 10 Aug 2011 00:00:00 UTC +00:00], ["title", "The Help"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[36m (22.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "PG-13"], ["release_date", Fri, 05 Jan 2001 00:00:00 UTC +00:00], ["title", "Chocolat"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[35m (22.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "R"], ["release_date", Wed, 25 Apr 2001 00:00:00 UTC +00:00], ["title", "Amelie"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[36m (34.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "G"], ["release_date", Sat, 06 Apr 1968 00:00:00 UTC +00:00], ["title", "2001: A Space Odyssey"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[35m (25.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "PG"], ["release_date", Fri, 05 Nov 2004 00:00:00 UTC +00:00], ["title", "The Incredibles"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[36m (25.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "PG"], ["release_date", Fri, 12 Jun 1981 00:00:00 UTC +00:00], ["title", "Raiders of the Lost Ark"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[35m (15.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 21 May 2014 19:22:36 UTC +00:00], ["description", nil], ["rating", "G"], ["release_date", Wed, 21 Jun 2000 00:00:00 UTC +00:00], ["title", "Chicken Run"], ["updated_at", Wed, 21 May 2014 19:22:36 UTC +00:00]]
+  [1m[36m (17.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-21 19:23:17 +0000
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (15.3ms)
+Compiled application.css  (0ms)  (pid 11735)
+Compiled jquery.js  (3ms)  (pid 11735)
+Compiled jquery_ujs.js  (0ms)  (pid 11735)
+Compiled application.js  (63ms)  (pid 11735)
+Completed 200 OK in 281.9ms (Views: 171.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 19:23:18 +0000
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 19:23:18 +0000
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-21 19:23:18 +0000
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 19:23:18 +0000
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 13:34:52 +0000
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (17ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 13:35:10 +0000
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 13:35:11 +0000
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 13:35:11 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 312.1ms (Views: 190.9ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 13:35:12 +0000
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 13:35:12 +0000
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 13:35:12 +0000
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 13:35:12 +0000
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 19:10:00 +0000
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (67ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:10 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 158.0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 2.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 1.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 2.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 6.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:10:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:11:24 +0000
+Processing by MoviesController#index as HTML
+After Redirect
+beginning of !all_ratings
+
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (142.2ms)
+Compiled application.css  (4ms)  (pid 26029)
+Completed 200 OK in 462.9ms (Views: 445.0ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 19:11:33 +0000
+Served asset /jquery.js - 200 OK (338ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:11:34 +0000
+Served asset /application.css - 200 OK (115ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 19:11:35 +0000
+Served asset /jquery_ujs.js - 200 OK (104ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 19:11:37 +0000
+Served asset /application.js - 200 OK (39ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:12:57 +0000
+Processing by MoviesController#index as HTML
+After Redirect
+beginning of !all_ratings
+
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (28.7ms)
+Completed 200 OK in 71.1ms (Views: 54.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:13:01 +0000
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=R&commit=Refresh" for 127.0.0.1 at 2014-05-27 19:13:12 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"R"}, "commit"=>"Refresh"}
+After Redirect
+beginning of !all_ratings
+
+  [1m[36mMovie Load (31.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R')[0m
+  Rendered movies/index.html.haml within layouts/application (106.4ms)
+Completed 200 OK in 198.4ms (Views: 161.6ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:13:15 +0000
+Served asset /application.css - 304 Not Modified (38ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2014-05-27 19:13:23 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+After Redirect
+beginning of !all_ratings
+
+  [1m[35mMovie Load (28.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R') ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (61.2ms)
+Completed 200 OK in 124.3ms (Views: 88.5ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:13:26 +0000
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/movies?sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:13:33 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+After Redirect
+beginning of !all_ratings
+
+  [1m[36mMovie Load (46.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R') ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (102.2ms)
+Completed 200 OK in 166.2ms (Views: 118.8ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:13:37 +0000
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/movies?sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:19:27 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+Redirected to http://localhost:3000/movies?ratings%5BR%5D=R&sort_by=release_date
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 2.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BR%5D=R&sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:19:28 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"R"=>"R"}, "sort_by"=>"release_date"}
+After Redirect
+beginning of !all_ratings
+
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R') ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (156.3ms)
+Completed 200 OK in 339.8ms (Views: 277.6ms | ActiveRecord: 50.8ms)
+
+
+Started GET "/movies?sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:19:29 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+Redirected to http://localhost:3000/movies?ratings%5BR%5D=R&sort_by=release_date
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 2.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BR%5D=R&sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:19:31 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"R"=>"R"}, "sort_by"=>"release_date"}
+After Redirect
+beginning of !all_ratings
+
+  [1m[36mMovie Load (38.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R') ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (63.2ms)
+Completed 200 OK in 161.9ms (Views: 83.2ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:19:34 +0000
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:19:44 +0000
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BR%5D=R&sort_by=release_date
+After Redirect
+beginning of !all_ratings
+
+Completed 302 Found in 3.3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BR%5D=R&sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:19:44 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"R"=>"R"}, "sort_by"=>"release_date"}
+After Redirect
+beginning of !all_ratings
+
+  [1m[35mMovie Load (13.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('R') ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (29.4ms)
+Completed 200 OK in 62.4ms (Views: 48.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:19:46 +0000
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:22:18 +0000
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+After Redirect
+beginning of !all_ratings
+
+  [1m[36mMovie Load (722.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (36020.4ms)
+Completed 200 OK in 59928.0ms (Views: 40266.5ms | ActiveRecord: 16981.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 19:24:53 +0000
+Served asset /rails.png - 304 Not Modified (11761ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:27:15 +0000
+Processing by MoviesController#index as HTML
+After Redirect
+beginning of !all_ratings
+
+  [1m[35mMovie Load (2160.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (10713.5ms)
+Completed 200 OK in 85705.3ms (Views: 53960.3ms | ActiveRecord: 2160.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 19:43:45 +0000
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (66.9ms)
+Completed 200 OK in 383.2ms (Views: 258.2ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:43:46 +0000
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 19:43:46 +0000
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 19:43:46 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 19:43:46 +0000
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&commit=Refresh" for 127.0.0.1 at 2014-05-27 19:43:56 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"PG-13", "R"=>"R"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 17.6ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:43:56 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 19:43:56 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 19:43:56 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 19:43:56 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies?sort_by=title" for 127.0.0.1 at 2014-05-27 19:44:01 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+Redirected to http://localhost:3000/movies?ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort_by=title
+Completed 302 Found in 5.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort_by=title" for 127.0.0.1 at 2014-05-27 19:44:01 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG-13"=>"PG-13", "R"=>"R"}, "sort_by"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R') ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 13.5ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:44:01 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:01 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:01 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:01 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:44:06 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+Redirected to http://localhost:3000/movies?ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort_by=release_date
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:44:06 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG-13"=>"PG-13", "R"=>"R"}, "sort_by"=>"release_date"}
+  [1m[35mMovie Load (1.7ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R') ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 23.3ms (Views: 21.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:44:06 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:06 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:06 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:06 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&commit=Refresh" for 127.0.0.1 at 2014-05-27 19:44:17 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "commit"=>"Refresh"}
+Redirected to http://localhost:3000/movies?ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort_by=release_date
+Completed 302 Found in 4.9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sort_by=release_date" for 127.0.0.1 at 2014-05-27 19:44:17 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sort_by"=>"release_date"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13', 'R') ORDER BY release_date[0m
+  Rendered movies/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 14.3ms (Views: 13.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 19:44:17 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:17 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:17 +0000
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 19:44:17 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 20:17:40 +0000
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (51ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-27 20:17:43 +0000
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-05-27 20:17:44 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (30.8ms)
+Completed 200 OK in 142.1ms (Views: 84.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 20:17:44 +0000
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 20:17:45 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 20:17:45 +0000
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 20:17:45 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&commit=Refresh" for 127.0.0.1 at 2014-05-27 20:19:01 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"G", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 19.8ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 20:19:01 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 20:19:02 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 20:19:02 +0000
+Served asset /application.js - 304 Not Modified (4ms)

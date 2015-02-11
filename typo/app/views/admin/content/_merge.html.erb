@@ -1,0 +1,6 @@
+<% className = form_action.delete(:class) %>
+<%= form_tag(form_action, :id => "#{form_type}_form", :class => className) do %>
+<h4><%= _("Merge Articles") %></h4>
+<%= text_field_tag(:merge_with) %>
+<%= save( _("Merge")) %>
+<% end %>
